@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!--
+    Example Korean text that gets wrapped mid word.
+    TextSize/margin is not required, it just makes it easier to see with more lines.
+     -->
+    <TextView
+        android:id="@+id/default_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:layout_margin="32dp"
+        android:text="이 레슨들은 체스의 모든 기본 개념을 익히는 데 도움이 되고 귀하의 레이팅을 수백 점 높일 것입니다. 이러한 주요 전략들을 모르는 친구들을 쉽게 이길 수 있을 것입니다!"
+        app:layout_constraintBottom_toTopOf="@+id/no_hyphenation_tv"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--
+    hyphenationFrequency / breakStrategy doesn't seem to help
+    -->
+    <TextView
+        android:id="@id/no_hyphenation_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:layout_margin="32dp"
+        android:text="이 레슨들은 체스의 모든 기본 개념을 익히는 데 도움이 되고 귀하의 레이팅을 수백 점 높일 것입니다. 이러한 주요 전략들을 모르는 친구들을 쉽게 이길 수 있을 것입니다!"
+        android:hyphenationFrequency="none"
+        android:breakStrategy="simple"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/default_tv" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
