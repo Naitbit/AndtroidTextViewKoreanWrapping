@@ -26,7 +26,7 @@
     <!--
     hyphenationFrequency / breakStrategy doesn't seem to help
     -->
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@id/no_hyphenation_tv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
